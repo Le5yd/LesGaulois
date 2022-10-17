@@ -26,7 +26,7 @@ public class Romain {
 		assert force > 0 : "La force d'un romain doit être positive !";
 		int forceInitial = force;
 		force -= forceCoup;
-		assert forceInitial = force : "La force d'un romain doit diminuer !";
+		assert forceInitial > force : "La force d'un romain doit diminuer !";
 		if (force > 0) {
 			parler("Aïe");
 		} else {
