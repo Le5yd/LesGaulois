@@ -2,6 +2,7 @@ package histoire;
 
 import personnages.Gaulois;
 import personnages.Romain;
+import personnages.Druide;
 
 public class Scenario {
 
@@ -9,13 +10,20 @@ public class Scenario {
 		
 		// Personnages
 		Gaulois asterix = new Gaulois("Astérix", 8);
-		Romain minus = new Romain("Minus", 6);
+		Gaulois obelix = new Gaulois("Obélix", 100);
+		Romain minus = new Romain("Minus", 48);
 		
 		// Scénario
-		asterix.parler("Bonjour à tous");
+		Druide panoramix = new Druide("Panoramix", 5, 10);
+		panoramix.parler("Je vais aller préparer une petite potion...");
+		panoramix.preparerPotion();
+		panoramix.booster(obelix);
+		obelix.parler("Par Bélénos, ce n'est pas juste !");
+		panoramix.booster(asterix);
+		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
-		asterix.frapper(minus);
-		asterix.frapper(minus);
-		asterix.frapper(minus);
+		for (int i = 1; i <= 3; i++) {
+			asterix.frapper(minus);
+		}
 	}
 }
