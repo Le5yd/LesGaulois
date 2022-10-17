@@ -36,5 +36,10 @@ public class Gaulois {
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		System.out.println(asterix.getNom());
 		System.out.println(asterix);
+		asterix.parler("Par Toutatis !");
+		Romain caligulaMinus = new Romain("Caligula Minus", 1);
+		asterix.frapper(caligulaMinus);
+		Romain caiusBonus = new Romain("Caius Bonus",10);
+		asterix.frapper(caiusBonus);
 	}
 }
