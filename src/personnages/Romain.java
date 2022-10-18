@@ -19,6 +19,10 @@ public class Romain {
 		return nom;
 	}
 
+	public int getForce() {
+		return force;
+	}
+
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
@@ -44,7 +48,7 @@ public class Romain {
 	public Equipement[] recevoirCoup(int forceCoup) {
 		Equipement[] equipementEjecte = null;
 		// précondition: la force d'un Romain est positive
-		assert force > 0;
+		assert force > 0 : "la force d'un Romain n'est pas positive !";
 		int oldForce = force;
 
 		forceCoup = calculResistanceEquipement(forceCoup);
@@ -57,7 +61,7 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 		// post-condition: la force d'un Romain a diminué
-		assert force < oldForce;
+		assert force < oldForce : "la force d'un Romain n'a pas diminué !";
 		return equipementEjecte;
 	}
 
@@ -74,10 +78,13 @@ public class Romain {
 					resistanceEquipement += 5;
 				}
 			}
-			texte += resistanceEquipement + " !";
+			texte += resistanceEquipement + "!";
 		}
 		parler(texte);
 		forceCoup -= resistanceEquipement;
+		if (forceCoup < 0) {
+			forceCoup = 1;
+		}
 		return forceCoup;
 	}
 
