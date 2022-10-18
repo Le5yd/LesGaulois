@@ -1,4 +1,4 @@
-ackage histoire;
+package histoire;
 
 import personnages.Gaulois;
 import personnages.Romain;
