@@ -1,4 +1,4 @@
-ackage personnages;
+package personnages;
 
 public enum Equipement {
 	CASQUE("casque"), BOUCLIER("bouclier");
