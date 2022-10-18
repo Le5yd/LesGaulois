@@ -1,4 +1,4 @@
-package personnages;
+ackage personnages;
 
 public class Chef {
 	private String nom;
