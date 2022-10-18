@@ -1,4 +1,4 @@
-ackage personnages;
+package personnages;
 
 public class Village {
 	private String nom;
