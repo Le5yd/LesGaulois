@@ -1,4 +1,4 @@
-package histoire;
+ackage histoire;
 
 import personnages.*;
 
