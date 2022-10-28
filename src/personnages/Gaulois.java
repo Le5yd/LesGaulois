@@ -1,4 +1,4 @@
-ackage personnages;
+package personnages;
 
 public class Gaulois {
 	private String nom;
