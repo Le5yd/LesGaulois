@@ -35,5 +35,6 @@ public class Scenario {
 		milexcus.parler("UN GAU... UN GAUGAU...");
 		asterix.frapper(milexcus);
 		asterix.faireUneDonnation(musee);
+		System.out.println("\n" + musee.extraireInstructionsCaml());
 	}
 }
