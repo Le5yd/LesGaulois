@@ -1,9 +1,6 @@
 package histoire;
 
-import personnages.Gaulois;
-import personnages.Romain;
-import personnages.Druide;
-import personnages.Equipement;
+import personnages.*;
 
 public class Scenario {
 
@@ -15,6 +12,7 @@ public class Scenario {
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		Romain minus = new Romain("Minus", 6);
 		Romain milexcus = new Romain("Milexcus", 8);
+		Musee musee = new Musee();
 		
 		// Scénario
 		panoramix.parler("Je vais aller préparer une petite potion...");
@@ -36,5 +34,6 @@ public class Scenario {
 //		} while (minus.getForce() > 0);
 		milexcus.parler("UN GAU... UN GAUGAU...");
 		asterix.frapper(milexcus);
+		asterix.faireUneDonnation(musee);
 	}
 }

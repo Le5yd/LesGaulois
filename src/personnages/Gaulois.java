@@ -4,7 +4,7 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
-	private int nbTrophees;
+	private int nbTrophees = 0;
 	private Equipement[] trophees = new Equipement[100];
 
 	public Gaulois(String nom, int force) {
@@ -44,6 +44,19 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
 		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplée.");
+	}
+
+	public void faireUneDonnation(Musee musee) {
+		if (nbTrophees != 0) {
+			String texte = "Je donne au musee tous mes trophees :";
+			for (int i = 0; i < nbTrophees; i++) {
+				Equipement equipement = trophees[i];
+				texte += "\n - " + equipement;
+				musee.donnerTrophees(this, equipement);
+			}
+			parler(texte);
+			nbTrophees = 0;
+		}
 	}
 
 	@Override
